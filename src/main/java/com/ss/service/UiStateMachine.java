@@ -11,6 +11,8 @@ import java.util.Scanner;
 
 import static com.ss.service.UiState.*;
 
+
+// state machine to hand ui
 public class UiStateMachine {
     UiState state = UiState.MAIN;
 

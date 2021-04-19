@@ -1,5 +1,7 @@
 package com.ss.service;
 
+
+// Potential UI states used my state machine
 public enum UiState {
     MAIN,
     FLIGHT_MAIN,

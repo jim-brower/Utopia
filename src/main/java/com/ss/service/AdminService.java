@@ -15,6 +15,7 @@ import java.util.List;
 public class AdminService {
     ConnectionUtil connUtil = new ConnectionUtil();
 
+    // wrapper to prevent ever method from being long
     interface DBTransaction {
         Object doTransaction(Connection conn) throws ClassNotFoundException, SQLException;
     }
@@ -177,6 +178,7 @@ public class AdminService {
         return (List<Flight>) transactionWrapper(transaction);
     }
 
+    // employee methods
     public void addEmployee(Employee employee) {
         DBTransaction transaction = (conn) -> {
             EmployeeDAO edao = new EmployeeDAO(conn);
